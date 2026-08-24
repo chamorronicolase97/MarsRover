@@ -8,11 +8,13 @@ namespace MarsRover
     {
         public int PosicionX { get; set; }
         public int PosicionY { get; set; }
-        
+        public string Orientacion { get; set; }
+
         public Rover(int posicionX, int posicionY, string orientacion)
         {
             PosicionX = posicionX;
             PosicionY = posicionY;
+            Orientacion = orientacion;
         }
 
         public string Avanzar(string comando)
@@ -22,6 +24,15 @@ namespace MarsRover
                 PosicionY += 1;
             }
             return $"{PosicionX},{PosicionY}";
+        }
+
+        public string GirarALaIzquierda()
+        {
+            if (Orientacion == "N")
+            {
+                Orientacion = "O";
+            }
+            return Orientacion;
         }
 
     }
