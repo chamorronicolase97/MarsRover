@@ -26,6 +26,15 @@ namespace MarsRover
             return $"{PosicionX},{PosicionY}";
         }
 
+        public string Retroceder(string comando)
+        {
+            if (comando == "B")
+            {
+                PosicionY -= 1;
+            }
+            return $"{PosicionX},{PosicionY}";
+        }
+
         public string GirarALaIzquierda()
         {
             switch (Orientacion)

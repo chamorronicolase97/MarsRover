@@ -61,7 +61,7 @@ namespace TestMarsRover
         {
             var rover = new Rover(0, 0, "N");
 
-            var posicion = rover.Avanzar("F");
+            var posicion = rover.Retroceder("B");
 
             Assert.AreEqual(posicion, "0,-1");
         }
