@@ -15,5 +15,14 @@ namespace MarsRover
             PosicionY = posicionY;
         }
 
+        public string Avanzar(string comando)
+        {
+            if (comando == "F")
+            {
+                PosicionY += 1;
+            }
+            return $"{PosicionX},{PosicionY}";
+        }
+
     }
 }
