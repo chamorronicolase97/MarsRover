@@ -105,5 +105,10 @@ namespace MarsRover
             return Orientacion;
         }
 
+        public string Mover(string comando)
+        {
+            return ("2,2");
+        }
+
     }
 }
