@@ -26,6 +26,16 @@ namespace TestMarsRover
             Assert.AreEqual(0, y);
         }
 
+        [TestMethod]
+        public void Avanzar()
+        {
+            var rover = new Rover(0, 0, "N");
+
+            var posicion = rover.Avanzar("F");
+
+            Assert.AreEqual(posicion, "0,1");
+        }
+
     }
 }
 
