@@ -66,6 +66,16 @@ namespace TestMarsRover
             Assert.AreEqual(posicion, "0,-1");
         }
 
+        [TestMethod]
+        public void Mover()
+        {
+            var rover = new Rover(0, 0, "N");
+
+            var posicion = rover.Mover("FFRFF");
+
+            Assert.AreEqual(posicion, "2,2");
+        }
+
     }
 }
 
