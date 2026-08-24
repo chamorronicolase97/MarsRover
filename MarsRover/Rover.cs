@@ -21,7 +21,21 @@ namespace MarsRover
         {
             if (comando == "F")
             {
-                PosicionY += 1;
+                switch(Orientacion)
+                {
+                    case "N":
+                        PosicionY += 1;
+                        break;
+                    case "E":
+                        PosicionX += 1;
+                        break;
+                    case "S":
+                        PosicionY -= 1;
+                        break;
+                    case "O":
+                        PosicionX -= 1;
+                        break;
+                }
             }
             return $"{PosicionX},{PosicionY}";
         }
@@ -30,7 +44,21 @@ namespace MarsRover
         {
             if (comando == "B")
             {
-                PosicionY -= 1;
+            switch(Orientacion)
+                {
+                    case "N":
+                        PosicionY -= 1;
+                        break;
+                    case "E":
+                        PosicionX -= 1;
+                        break;
+                    case "S":
+                        PosicionY += 1;
+                        break;
+                    case "O":
+                        PosicionX += 1;
+                        break;
+                }
             }
             return $"{PosicionX},{PosicionY}";
         }
