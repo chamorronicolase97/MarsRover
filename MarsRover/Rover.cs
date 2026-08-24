@@ -35,5 +35,14 @@ namespace MarsRover
             return Orientacion;
         }
 
+        public string GirarALaDerecha()
+        {
+            if (Orientacion == "N")
+            {
+                Orientacion = "E";
+            }
+            return Orientacion;
+        }
+
     }
 }
