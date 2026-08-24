@@ -28,18 +28,42 @@ namespace MarsRover
 
         public string GirarALaIzquierda()
         {
-            if (Orientacion == "N")
+            switch (Orientacion)
             {
-                Orientacion = "O";
+                case
+                    "N":
+                    Orientacion = "O";
+                    break;
+                case "O":
+                    Orientacion = "S";
+                    break;
+                case "S":
+                    Orientacion = "E";
+                    break;
+                case "E":
+                    Orientacion = "N";
+                    break;
             }
             return Orientacion;
         }
 
         public string GirarALaDerecha()
         {
-            if (Orientacion == "N")
-            {
-                Orientacion = "E";
+            switch(Orientacion)
+                {
+                case
+                    "N":
+                    Orientacion = "E";
+                    break;
+                case "E":
+                    Orientacion = "S";
+                    break;
+                case "S":
+                    Orientacion = "O";
+                    break;
+                case "O":
+                    Orientacion = "N";
+                    break;
             }
             return Orientacion;
         }
