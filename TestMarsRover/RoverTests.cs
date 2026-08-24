@@ -46,6 +46,16 @@ namespace TestMarsRover
             Assert.AreEqual(orientacion, "O");
         }
 
+        [TestMethod]
+        public void GirarAlaDerecha()
+        {
+            var rover = new Rover(0, 0, "N");
+
+            var orientacion = rover.GirarALaDerecha();
+
+            Assert.AreEqual(orientacion, "E");
+        }
+
     }
 }
 
