@@ -17,49 +17,47 @@ namespace MarsRover
             Orientacion = orientacion;
         }
 
-        public string Avanzar(string comando)
+        public string Avanzar()
         {
-            if (comando == "F")
+
+            switch (Orientacion)
             {
-                switch(Orientacion)
-                {
-                    case "N":
-                        PosicionY += 1;
-                        break;
-                    case "E":
-                        PosicionX += 1;
-                        break;
-                    case "S":
-                        PosicionY -= 1;
-                        break;
-                    case "O":
-                        PosicionX -= 1;
-                        break;
-                }
+                case "N":
+                    PosicionY += 1;
+                    break;
+                case "E":
+                    PosicionX += 1;
+                    break;
+                case "S":
+                    PosicionY -= 1;
+                    break;
+                case "O":
+                    PosicionX -= 1;
+                    break;
             }
+
             return $"{PosicionX},{PosicionY}";
         }
 
-        public string Retroceder(string comando)
+        public string Retroceder()
         {
-            if (comando == "B")
+
+            switch (Orientacion)
             {
-            switch(Orientacion)
-                {
-                    case "N":
-                        PosicionY -= 1;
-                        break;
-                    case "E":
-                        PosicionX -= 1;
-                        break;
-                    case "S":
-                        PosicionY += 1;
-                        break;
-                    case "O":
-                        PosicionX += 1;
-                        break;
-                }
+                case "N":
+                    PosicionY -= 1;
+                    break;
+                case "E":
+                    PosicionX -= 1;
+                    break;
+                case "S":
+                    PosicionY += 1;
+                    break;
+                case "O":
+                    PosicionX += 1;
+                    break;
             }
+
             return $"{PosicionX},{PosicionY}";
         }
 
@@ -86,8 +84,8 @@ namespace MarsRover
 
         public string GirarALaDerecha()
         {
-            switch(Orientacion)
-                {
+            switch (Orientacion)
+            {
                 case
                     "N":
                     Orientacion = "E";
@@ -107,8 +105,27 @@ namespace MarsRover
 
         public string Mover(string comando)
         {
-            return ("2,2");
+            foreach (char c in comando)
+            {
+                switch (c)
+                {
+                    case
+                    'F':
+                        Avanzar();
+                        break;
+                    case 'B':
+                        Retroceder();
+                        break;
+                    case 'L':
+                        GirarALaIzquierda();
+                        break;
+                    case 'R':
+                        GirarALaDerecha();
+                        break;
+                }
+            }
+            return $"{PosicionX},{PosicionY}";
         }
-
     }
 }
+
