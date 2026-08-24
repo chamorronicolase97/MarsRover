@@ -56,6 +56,16 @@ namespace TestMarsRover
             Assert.AreEqual(orientacion, "E");
         }
 
+        [TestMethod]
+        public void Retroceder()
+        {
+            var rover = new Rover(0, 0, "N");
+
+            var posicion = rover.Avanzar("F");
+
+            Assert.AreEqual(posicion, "0,-1");
+        }
+
     }
 }
 
